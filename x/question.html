@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Forum | Bhumik</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+   
+	<style type="text/css">
+	 body .cont {margin:20px;}
+	 
+       .navbar .navbar-inner {
+        padding: 0;
+      }
+      .navbar .nav {
+        margin: 0;
+        display: table;
+        width: 100%;
+      }
+      .navbar .nav li {
+        display: table-cell;
+		
+        float: none;
+      
+	  }
+	  .navbar .nav li a {
+        font-weight: bold;
+        text-align: center;
+        border-left: 1px solid rgba(255,255,255,.75);
+        border-right: 1px solid rgba(0,0,0,.1);
+      }
+      .navbar .nav li:first-child a {
+        border-left: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .navbar .nav li:last-child a {
+        border-right: 0;
+        border-radius: 0 3px 3px 0;
+      }
+	  
+	  .table th, .table td{line-height: 13px;}
+	  
+	 </style>
+  </head>
+
+  <body style="background-image:url(4.png)">
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+	<h2 style="margin-left:10px;" > Discussion forum </h2>
+<div class="cont">
+	<div class="navbar">
+		<div class="navbar-inner">
+			<ul class="nav">
+			<li><a href="#">Home</a></li>
+			<li class="active"><a href="#">Topics</a></li>
+			<li><a href="#">more &nbsp;</a></li>
+			<li><a href="#">Contact </a></li>
+			<li><a href="#">About Us</a></li>
+		</ul>
+  </div>
+		<ul class="breadcrumb">
+			<li><a href="#">Home</a> <span class="divider">/</span></li>
+			<li><a href="#">Topics</a> <span class="divider">/</span></li>
+			<li><a href="#">Twitters</a> <span class="divider">/</span></li>
+			<li class="active">Questions</li>
+		</ul>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span2">
+				<ul class="nav nav-list well">
+						<li class="nav-header">Topics</li>
+						<li ><a href="#">Home</a></li>
+  						<li><a href="#">turbo c</a></li>
+						<li><a href="#">java</a></li>
+						<li><a href="#">facebook</a></li>
+						<li><a href="#">sqala</a></li>
+						<li class="divider"></li>
+						<li><a href="#">javascript</a></li>
+						<li class="active"><a href="#">jQuery</a></li>
+						
+				</ul><br>
+			<div class="well" style="height:55px;margin-bottom:0px;">
+			<p >	Advertise Here<p>
+			</div>		
+		</div>
+		
+		<div class="span10">
+			<div class="well well-small" style="margin-bottom:0px;">
+			<strong >Topic &nbsp;&nbsp;: &nbsp;&nbsp;</strong>
+				<button type="submit" class="btn btn-info btn-small" style="width:100px">twitter</button>
+		
+				<a href="#myModal" role="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal" >Add Question</a>
+		
+						<div id="myModal" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" >X</button>
+								<h3 id="myModalLabel">Add Question  in this Topic</h3>
+							</div>
+							<form>
+							<div class="modal-body">
+								
+								<label>Enter Question</label>
+								<input type="text" placeholder="Enter Question here">
+								<label>Your Name </label>
+								<input type="text" placeholder="Hey,Write Ur Name Here">
+								
+							</div>
+							<div class="modal-footer">
+									<button class="btn" data-dismiss="modal" >Close</button>
+									<button type="submit" class="btn btn-primary">ADD</button>
+							</div>
+							</form>
+						</div>			
+		     </div>
+			
+			
+			<table class="table table-hover;">
+              <thead>
+                <tr>
+                  <th style="width:4%">#</th>
+                  <th style="width:45%">Questions</th>
+                  <th style="width:20%;">Views</th>
+                  <th style="width:10%">Replies</th>
+				  <th style="width:20%">Lase Update</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+				  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+				  <td>Thornton</td>
+                  <td>@fat</td>
+				  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td >Larry the Bird</td>
+                  <td>Thornton</td>
+                  <td>@twitter</td>
+				  <td>@mdo</td>
+                </tr>
+                  
+                <tr>
+                  <td>5</td>
+                  <td>Larry the Bird</td>
+                  <td>Thornton</td>
+                  <td>@twitter</td>
+				  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Larry the Bird</td>
+                  <td>Thornton</td>
+                  <td>@twitter</td>
+				  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Larry the Bird</td>
+                  <td>Thornton</td>
+                  <td>@twitter</td>
+				  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Larry the Bird</td>
+                  <td>Thornton</td>
+                  <td>@twitter</td>
+				  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Larry the Bird</td>
+                  <td>Thornton</td>
+                  <td>@twitter</td>
+				  <td>@mdo</td>
+                </tr><tr>
+                  
+                  <td>10</td>
+                  <td>Larry the Bird</td>
+                  <td>Thornton</td>
+                  <td>@twitter</td>
+				  <td>@mdo</td>
+                </tr>
+     
+			  </tbody>
+			</table>
+				
+		<ul class="pager"  style="margin:-10px;">
+			<li class="previous"> <a href="#">&larr; Newer</a> </li>
+			<li class="next"><a href="#">Older &rarr;</a></li>
+		</ul>
+
+<!--<div class="pagination pagination-centered" style="margin:-5px;">
+					<ul>
+						<li class="active"><a href="#">&laquo;</a></li>
+						<li ><a href="#">1</a></li>
+						<li ><a href="#">2</a></li>
+						<li ><a href="#">3</a></li>
+						<li ><a href="#">&laquo;</a></li>
+					</ul>
+				</div>-->
+		</div>
+	</div>
+	
+</div>
+
+            <div style="margin:20px;" >
+				<hr>
+				<p class="pull-right"><a href="#">BHUMIK</a></p>
+				<p>&copy; 2013 Copyrights, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+			</div>
+ 
+</body>
+  
+  
+  </html>
