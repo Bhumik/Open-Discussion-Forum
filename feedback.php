@@ -1,17 +1,23 @@
 <?php
 
-$host="localhost"; // Host name
-$username="root"; // Mysql username
-$password=""; // Mysql password
-$db_name="test"; // Database name
-$tbl_name="questions"; // Table name
+$name=$_GET['name'];
+$mail=$_GET['mail'];
+$feed=$_GET['feed'];
 
-// Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("cannot connect");
-mysql_select_db("$db_name")or die("cannot select DB");
 
+$date=date("d/m/Y");
+date_default_timezone_set('Asia/Kolkata');
+$time = date('h:i:s a', time())."  ".$date;
+
+
+$data="Name : ".$name."\r\nMail : ".$mail."\r\nDate :  ".$time."\r\nFeed : ".$feed."\r\n\r\n";
+$my_file = 'feedback.txt';
+$handle = fopen($my_file, 'a+') or die('Cannot open file:  '.$my_file);
+fwrite($handle, $data);
+fwrite($handle,"\n");
 
 ?>
+
 
 
 
@@ -26,6 +32,9 @@ mysql_select_db("$db_name")or die("cannot select DB");
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.gif"> 
+
+
+
 	<style type="text/css">
 	 body .cont {margin:20px;}
 	 
@@ -68,6 +77,7 @@ mysql_select_db("$db_name")or die("cannot select DB");
 	
 	
 	<h2 style="margin-left:10px;" > Discussion forum </h2>
+	
 <div class="cont">
 	<div class="navbar">
 		<div class="navbar-inner">
@@ -81,76 +91,26 @@ mysql_select_db("$db_name")or die("cannot select DB");
   </div>
 		<ul class="breadcrumb">
 			<li><a href="#" >Home</a> <span class="divider">/</span></li>
-			<li><a href="#" class="active">About Us</a> </li>
-
+			<li><a href="#" class="active">Contact Us</a> </li>
+			
 		</ul>
 	</div>
 </div>
 
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span2">
-				<ul class="nav nav-list well">
-						<li class="nav-header">Topics</li>
-						<li ><a href="#">Home</a></li>
-  						<li><a href="#">turbo c</a></li>
-						<li><a href="#">java</a></li>
-						<li><a href="#">facebook</a></li>
-						<li><a href="#">sqala</a></li>
-						<li class="divider"></li>
-						<li><a href="#">javascript</a></li>
-						<li class="active"><a href="#">jQuery</a></li>
-				</ul><br>
-			<div class="well" style="height:55px;margin-bottom:0px;">
-			<p >	Advertise Here<p>
-			</div>		
-		</div>
-		
-		<div class="span10">
-			<table style="width:100%;">
-			<tr>
-				<td>About</td>
-			<tr/>
-			
-			<tr>
-				<td >
-					<img src="twitter.png" width="200" height="200" style="float:right;">
-					<h5 style="float:left">
-						Wel Come...
-						<br>My Self  Bhumik Sapara
-						<br>Computer Engineering Student with Creative thinking. addicted to internet..for lots of fun ,knowledge and Inspiration...
-						<br>Vidhyanagar,Gujarat,India
-					</h5>
-					
-				</td>
-			</tr>
-			
-			<tr>
-					<td>
-					<h4>Socialize With Us...</h4>
-					<td>
-			</tr>
-				
-			<tr>
-				<td><label>FAcebook</label></td>
-			</tr>
-			
-			<tr>
-				<td><h3>Site is Under Construction</h3></td>
-			</tr>
-		</table>
-	</div>
-	
-</div>
+		<div >
+		<div style="margin-left:38%;margin: 14% 0px 14% 38%;color:#00ff00;font-size:40px;width:300px;"><h4 class="well" ><i class="icon-ok"></i>&nbsp;&nbsp;Message Successfully Sent</h4></div>
 
+		</div>
+			
+			
             <div style="margin:20px;" >
 				<hr>
 				<p class="pull-right"><a href="#">BHUMIK</a></p>
 				<p>&copy; 2013 Copyrights, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
 			</div>
 
-<?php mysql_close(); ?>
- 
+
+
 </body>
   
   

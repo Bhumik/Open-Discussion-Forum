@@ -1,12 +1,13 @@
 <?php
 
+
 $host="localhost"; // Host name
 $username="root"; // Mysql username
 $password=""; // Mysql password
 $db_name="test"; // Database name
 $tbl_name="questions"; // Table name
 
-// Connect to server and select databse.
+
 mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
 
@@ -26,6 +27,9 @@ mysql_select_db("$db_name")or die("cannot select DB");
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.gif"> 
+
+
+
 	<style type="text/css">
 	 body .cont {margin:20px;}
 	 
@@ -107,17 +111,17 @@ mysql_select_db("$db_name")or die("cannot select DB");
 		</div>
 		
 		<div class="span10">
-		<form>
+		<form name="input" action="feedback.php" method="get">
 		<h2>Contact Us</h2>
 		<h6>Feel free to connect with Us...</h6>
 				<label><h4>Name </h4></label>
 				<input type="text" name="name" style="width:30%;">
 				
 				<label><h4>Email id</h4></label>
-				<input type="text" name="name" style="width:30%;">
+				<input type="email" name="mail" style="width:30%;">
 				
 				<label><h4>Feedback / Suggestion</h4></label>
-				<textarea  name="name" rows="5" style="width:30%;"></textarea><br>
+				<textarea  name="feed" rows="5" style="width:30%;"></textarea><br>
 				<button type="submit" class="btn btn-success" style="width:10%;">SEND</button>
 		</form>	
 		</div>
@@ -132,7 +136,7 @@ mysql_select_db("$db_name")or die("cannot select DB");
 			</div>
 
 <?php mysql_close(); ?>
- 
+
 </body>
   
   

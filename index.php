@@ -127,7 +127,7 @@ $nr=1;
 ?>
                 <tr>
                   <td><? echo $nr ?></td>
-                  <td><a href="http://localhost/bhumik/answer.php?id=<? echo $rows['id']; ?>"><? echo $rows['detail']; ?></a></td>
+                  <td><a href="answer.php?id=<? echo $rows['id']; ?>"><? echo $rows['detail']; ?></a></td>
                   <td><? echo $rows['topic']; ?></td>
 				  <td><? echo $rows['view']; ?></td>
                   <td><? echo $rows['reply']; ?></td>

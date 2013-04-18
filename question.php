@@ -184,7 +184,7 @@ while($rows=mysql_fetch_array($result)){
 ?>
                 <tr>
                   <td><? echo $nr?></td>
-                  <td><a href="http://localhost/bhumik/answer.php?id=<? echo $rows['id']; ?>"><? echo $rows['detail']; ?></a></td>
+                  <td><a href="answer.php?id=<? echo $rows['id']; ?>"><? echo $rows['detail']; ?></a></td>
                   <td><? echo $rows['name']; ?></td>
 				  <td><? echo $rows['view']; ?></td>
                   <td><? echo $rows['reply']; ?></td>
